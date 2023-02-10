@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="educationStyles.css">
+</head>
+<body>
+    <img src="images\back.png" id="backButton">
+    <h1 id="title">ᲒᲐᲜᲐᲗᲚᲔᲑᲐ</h1>
+    <p id="page">3/3</p>
+    <hr id="decLine">
+
+    <div class="form-container">
+        <form class="form">
+            <div class="item">
+                <div class="cont saswavlebeli">
+                    <label for="saswavlebeliInput0" class="labels">სასწავლებელი</label>
+                    <input type="text" name="saswavlebeliInput0" id="saswavlebeliInput0" class="inputs" placeholder="სასწავლებელი">
+                    <span id="saswavlebeliInput0Span"><img src="images/check.png"></span>
+                    <span id="saswavlebeliInput0SpanError"><img src="images/error.png"></span>
+                    <p class="underInput">მინიმუმ 2 სიმბოლო</p>
+                </div>
+    
+                <div class="degreeAndDate cont">
+                    <div class="degree">
+                        <label for="degreeInput0" class="labels">ხარისხი</label>
+                        <select id="degreeInput0" name="degreeInput0" class="dropInputs">
+                            <option value="" disabled selected hidden>აირჩიეთ ხარისხი</option>
+                        </select>
+                        <spam class="arrowImage"><img src="images\arrow.png"></spam>
+                    </div>
+                    <div class="endDate">
+                        <label for="endDateInputEdu0" class="dateLabels">დამთავრების რიცხვი</label>
+                        <input type="date" name="endDateInputEdu0" id="endDateInputEdu0" class="dateInputs">
+                    </div>
+                </div>
+    
+                <div class="agwera cont">
+                   <label for="descriptionTextFieldEducation0" class="labels">აღწერა</label>
+                    <textarea name="descriptionTextFieldEducation0" id="descriptionTextFieldEducation0" class="bigInputs" placeholder="განათლების აღწერა"></textarea>
+                </div>
+                <hr class="betweenItems">
+            </div>
+        </form>
+        <div class="form-buttons">
+            <button id="addEducation" type="button">სხვა სასწავლებლის დამატება</button>
+            <button type="button" id="goBack">ᲣᲙᲐᲜ</button>
+            <button type="button" id="next">ᲨᲔᲛᲓᲔᲒᲘ</button>
+        </div>
+    
+    </div>
+    
+    
+    
+    <div id="resume">
+        <div id="privateInfoDiv">
+            <div id="profilePictureDiv">
+                <img id="profilePicture">
+            </div>
+            <div id="privateInfoItselfDiv">
+                <div id="name" class="grid-item">
+                    <p id="nameParagraph"></p>
+                </div>
+                <div id="contacts" class="grid-item">
+                    <div id="emailDiv">
+                        <img src="images/email.png" id="emailImage">
+                        <p id="emailParagraph"></p>
+                    </div>
+                    <div id="telDiv">
+                        <img src="images/mobile.png" id="telImage">
+                        <p id="telParagraph"></p>
+                    </div>
+                </div>
+                <div id="aboutMeDiv">
+                    <p id="aboutMeTitle">ᲩᲔᲛ ᲨᲔᲡᲐᲮᲔᲑ</p>
+                    <p id="aboutMeText"> </p>
+                </div>
+            </div>            
+        </div>
+        <hr class="hrsUnderPrivate">
+        <div id="experienceDiv">
+            <p id="experienceTitle">ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ</p>
+            <div id="experienceGrid">
+            </div>   
+        </div>
+        <hr class="hrsUnderExperience">
+        <div id="educationDiv">
+            <p id="educationTitle">ᲒᲐᲜᲐᲗᲚᲔᲑᲐ</p>
+            <div id="educationGrid">
+              
+            </div>  
+        </div>
+
+        <img src="images/starLogo.png" id="starLogo">
+    </div>
+
+    <script src="educationRouter.js" type="module"></script>
+    <script src="educationValidator.js" type="module"></script>
+    <script src="addEducation.js" type="module"></script>
+    <script src="education.js" type="module"></script>
+</body>
+</html>

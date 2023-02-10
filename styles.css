@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(fonts/HelveticaNeue.ttf);
+}
+
+body{
+    background-image: url('images/backgroundImage.png');
+}
+
+#redberryLogo{
+    position: absolute;
+    width: 236px;
+    height: 38px;
+    left: 70px;
+    top: 25px;
+}
+
+#decLine{
+    position: absolute;
+    color: black;
+    width: 1780px;
+    top: 89px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#circularLogo{
+    position: absolute;
+    width: 299px;
+    height: 299px;
+    top: 473px;
+    left: 1076px;
+}
+
+#addResume{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    gap: 20px;
+    position: absolute;
+    width: 464px;
+    height: 60px;
+    left: calc(50% - 464px/2);
+    top: 513px;
+    background: #1A1A1A;
+    border-radius: 8px;
+}
+
+#buttonText{
+    position: absolute;
+    font-family: "HelveticaNeue";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 212px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}

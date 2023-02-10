@@ -1,0 +1,786 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(fonts/HelveticaNeue.ttf);
+}
+
+body{
+    background-color: #F9F9F9;
+    margin-top: 0;
+}
+
+#resume{
+    position: relative;
+    left: 1098px;
+    width: 822px;
+    height: 1080px;
+    background-color: white;
+    overflow: scroll;
+
+}
+
+#starLogo{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 78px;
+    bottom: 44px;
+    margin: 0;
+}
+
+#backButton{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 48px;
+    top: 45px;
+}
+
+#title{
+    position: absolute;
+    height: 29px;
+    left: 149px;
+    top: 47px;
+    color: #1A1A1A;
+    margin: 0;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 29px;
+    line-height: 29px;
+}
+
+#page{
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    left: 920px;
+    top: 49px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+#decLine{
+    position: absolute;
+    width: 798px;
+    height: 0px;
+    left: 150px;
+    top: 88px;
+    margin-top: 2px;
+    border: 1px solid #1A1A1A;
+}
+
+
+.cont{
+    width: 846px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+    position: relative;
+}
+
+.labels{
+    width: 371px;
+    height: 21px;   
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.inputs{
+    box-sizing: border-box;
+    width: 798px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-left: 16px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.inputs:focus{
+    outline: none;
+    border: 2px solid #BCBCBC;
+    border-radius: 4px;
+}
+
+.underInput{
+    width: 371px;
+    height: 21px;   
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #2E2E2E;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0;
+} 
+
+.tarigebi{
+    display: flex;
+    flex-direction: row;
+}
+
+.startDate, .endDate{
+    float:left;
+    width: 393px;
+    height: 93px;
+}
+
+.dateInputs{
+    width: 339px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.dateLabels{
+    width: 339px;
+    height: 21px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-bottom: 8px;
+}
+
+#endDate{
+    margin-left: 24px;
+}
+
+.bigInputs{
+    resize:none;
+    width: 764px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 13px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bigInputs:focus{
+    outline: none;
+    background: #FFFFFF;
+    border: 2px solid #BCBCBC;
+    border-radius: 4px;
+}
+
+.betweenItems{
+    width: 798px;
+    height: 0px;
+    top: 760px;
+    border: 1px solid #C1C1C1;
+    transform: translateX(-25px);
+    margin-bottom: 40px;
+}
+
+
+
+
+#positionInput0Span, #employerInput0Span{
+    display: none;
+    position: absolute;
+    top:52px;
+    left: 782.75px;
+}
+
+#positionInput0SpanError, #employerInput0SpanError, #endDateInput0SpanError, #descInput0SpanError{
+    display: none;
+    position: absolute;
+    top:52px;
+    left: 841px;
+}
+
+#startDateInput0Span{
+    display: none;
+    position: absolute;
+    top:52px;
+    left: 410px;
+}
+
+#startDateInput0SpanError{
+    display: none;
+    position: absolute;
+    top:52px;
+    left: 408px;
+}
+
+#endDateInput0Span, #descInput0Span{
+    display: none;
+    position: absolute;
+    top:52px;
+    left: 840px;
+}
+
+.endDate{
+    margin-left: 20px;
+}
+
+
+#photoInputSpanError{
+    display: none;
+    position: absolute;
+    left: 371px;
+    top: 3px;
+}
+
+#photoInputSpan{
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 373px;
+}
+
+#addExperience{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 18px;
+    gap: 20px;
+    position: absolute;
+    width: 289px;
+    height: 48px;
+    background: #62A1EB;
+    border-radius: 4px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;  
+    color: #FFFFFF;
+    border:none;
+    top: 5px;
+}
+
+#goBack{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    gap: 20px;
+    position: absolute;
+    width: 113px;
+    height: 48px;
+    background: #6B40E3;
+    border-radius: 4px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    top: 167px;
+}
+
+#next{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    gap: 20px;  
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    background: #6B40E3;
+    border-radius: 4px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    top: 167px;
+    left: 647px;
+}
+
+
+
+.form-container{
+    width: 798px;
+    position: absolute;
+    left: 150px;
+    top:88px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons{
+    position: relative;
+    width: 798px;
+    height:210px;
+    top: 70px;
+    margin-bottom: 130px;
+}
+
+
+.form{
+    display: grid;
+    position: relative;
+    float: left;
+    width: 846px;
+    top: 77px;
+    left: -22px;
+}
+
+.item{
+    display: grid;
+    width: 846px;
+    grid-template-rows: 125px 125px 125px 168px;
+    row-gap: 12px;
+}
+
+#dec{
+    position: relative;
+    width: 798px;
+    height: 0px;
+    border: 1px solid #1A1A1A;
+}
+
+
+
+
+.decoration{
+    width: 662px;
+    border: 1px solid #C8C8C8;
+    position: relative;
+    margin-left: 0;
+}
+
+#jobHeader{
+    font-family: 'HelveticaNeue';
+    display: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F93B1D;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.jobInResume{
+    position: relative;
+    left: 80px;
+    top: 24px;
+}
+
+.jobName{
+    position: relative;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1A;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.dates{
+    margin-top: 7px;
+    font-family: 'HelveticaNeue';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    margin-bottom: 0;
+}
+
+.jobdesc{
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 16px;
+    max-width: 662px;
+}
+
+#text{
+    min-height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#privateInfoDiv{
+    margin-left: 80px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    position: relative;
+    width: 664.37px;
+    margin-top:48px;
+}
+
+#profilePicture{
+    position:relative;
+    border-radius: 50%;
+    height: 246px;
+    width: 246px;
+}
+
+#profilePictureDiv{
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#privateInfoItselfDiv{
+    width: 418.37px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#name{
+    margin-top: 20px;
+}
+
+#nameParagraph{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 42px;
+    color: #F93B1D;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#emailDiv{
+    position: relative;
+    display: flex;
+    margin-top: 17px;
+}
+
+#telDiv{
+    position: relative;
+    display: flex;
+    margin-top: 10px; 
+}
+
+#emailImage{
+    margin-left: 2.67px;
+    padding-top: 4px;
+}
+
+#telImage{
+    margin-left: 2.67px;
+}
+
+#emailParagraph, #telParagraph{
+    margin-left: 11.67px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+}
+
+
+#aboutMeTitle{
+    margin-top: 35.55px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F93B1D;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+#aboutMeText{
+    margin-top: 15px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #000000;
+    width: 450px;
+    margin-bottom: 0;
+}
+
+.hrsUnderPrivate{
+    margin-left: 80px;
+    margin-top: 19px;
+    width: 662px;
+    border: 1px solid #C8C8C8;
+}
+
+#experienceDiv{
+    margin-left: 80px;
+    width: 664.37px;
+    align-self: center;
+    position: relative;
+}
+
+#experienceTitle{
+    margin-top: 24px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F93B1D;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    display: none;
+
+}
+
+#experienceGrid{
+    position: relative;
+    display: grid;
+}
+
+.experienceNameParagraph{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1A;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.experienceDatesParagraph{
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.experienceTextParagraph{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.hrsUnderExperience{
+    margin-left: 80px;
+    margin-top: 32px;
+    width: 662px;
+    border: 1px solid #C8C8C8;
+    margin-bottom: 0;
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#educationDiv{
+    margin: 0;
+    margin-left: 80px;
+    width: 664.37px;
+    align-self: center;
+    position: relative;
+}
+
+#educationTitle{
+    display: none;
+    margin: 0;
+    margin-top: 26px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F93B1D;
+    letter-spacing: 1px;
+}
+
+#educationGrid{
+    margin: 0;
+    position: relative;
+    display: grid;
+}
+
+.educationNameParagraph{
+    margin: 0;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1A;
+    margin-top: 15px;
+}
+
+.educationDatesParagraph{
+    margin: 0;
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    margin-top: 7px;
+}
+
+.educationTextParagraph{
+    margin: 0;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 16px;
+}
+
+#starLogo{
+    margin: 0;
+    position: absolute;
+    margin-left: 78px;
+    bottom: 44px;
+}
+
+#emailImage, #telImage{
+    width: 16.67px;
+    margin: 0;
+    height: 16.67px;
+}
+
+#emailParagraph, #telParagraph{
+    margin: 0;
+    margin: 0;
+    margin-left: 11.67px;
+}
