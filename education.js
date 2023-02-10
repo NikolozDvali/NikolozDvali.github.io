@@ -8,6 +8,7 @@ if(!localStorage.getItem("counterEdu")){
     localStorage.setItem("counterEdu", 0);
 }
 
+
 //updates resume with previous data (private and experience);
 resetDataFromPreviousPages();
 

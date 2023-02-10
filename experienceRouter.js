@@ -17,3 +17,4 @@ nextButton.addEventListener("click", function(e){
         location.assign("education.html");
     }    
 })
+

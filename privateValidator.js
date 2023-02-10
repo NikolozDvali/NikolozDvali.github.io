@@ -21,6 +21,7 @@ export function makeInputBoxValid(str){
     document.getElementById(str).style.display = "none";
 }
 
+
 //
 export function makeInputBoxInvalid(str){
     document.getElementById(str).style.borderColor = "#EF5050";

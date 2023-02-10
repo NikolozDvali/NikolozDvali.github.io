@@ -9,6 +9,7 @@ export function addNewExperienceItem(num){
     addConts(item, num);
 }
 
+
 //
 function addConts(e, num){
     let posCont = document.createElement("div");

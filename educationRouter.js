@@ -10,6 +10,7 @@ backButtonAtBottom.addEventListener("click", function(e){
     location.assign("experience.html");
 })
 
+
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", ()=>{
     if(eduIsValid()){

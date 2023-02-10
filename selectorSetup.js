@@ -17,6 +17,7 @@ async function getData(id){
     });
 }
 
+
 function addOptions(id){
     for(let i = 0; i<arr.length; i++){
         let opt = document.createElement("option");

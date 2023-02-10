@@ -15,6 +15,7 @@ export function updateOnRefreshPrivate(){
             document.getElementById("nameParagraph").innerText = name;
         }
     }
+    
 
     if(localStorage.getItem("lastNameInput")){
         if(localStorage.getItem("lastNameInput")!=""){

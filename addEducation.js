@@ -1,6 +1,7 @@
 import { addNewEducationItem, addNewEducationItemInResume } from "./newItem.js";
 import { addNewEducationListeners, addLiveValidatorsEducation } from "./listeners.js";
 
+
 let counterEdu = 0;
 
 if(document.URL.indexOf("education.html") != -1){

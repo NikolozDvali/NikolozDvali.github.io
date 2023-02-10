@@ -3,6 +3,7 @@ import {makeSelectorValid, makeSelectorInvalid} from "./listeners.js"
 import { makeDateValid, makeTextInputBoxInvalid,makeDateInvalid } from "./experienceValidator.js";
 
 
+
 //
 //checks validation education
 export function checkValidationEducation(){

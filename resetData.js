@@ -9,6 +9,7 @@ export function resetDataFromPreviousPages(){
     resetEducationData();
 }
 
+
 //
 //resets private data in resume;
 function resetPrivateData(){

@@ -20,6 +20,7 @@ input.addEventListener("change", function(e){
 
 
 
+
 //sets image from localstorage:
 if(localStorage.getItem('image')){
     document.getElementById("profilePicture").src = localStorage.getItem('image');

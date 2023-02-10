@@ -1,6 +1,7 @@
 import {checkValidationForNames, makeTextInputBoxInvalid, makeTextInputBoxValid, makeDateValid } from "./experienceValidator.js"
 
 
+
 //
 //checks main experience validation after refresh
 export function checkValidationExperience(){

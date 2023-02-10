@@ -2,6 +2,7 @@ import { addLiveValidatorsExperience, addNewExperienceListeners } from "./listen
 import { addNewExperienceItemInResume, addNewExperienceItem } from "./newItem.js";
 let counter = 0;
 
+
 //onclick adds new experience form item and resume item, adds live validators for newly created inputs;
 if(window.location.pathname==="/experience.html"){
     const button = document.getElementById("addExperience");

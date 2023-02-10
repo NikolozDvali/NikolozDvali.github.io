@@ -19,6 +19,7 @@ function addLiveJobNameListeners(num){
         }
     })
 
+    
     document.getElementById("employerInput"+num).addEventListener("input", ()=>{
         if(localStorage.getItem("positionInput"+num)!=null){
             let start = localStorage.getItem("positionInput"+num);

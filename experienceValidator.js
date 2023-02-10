@@ -20,6 +20,7 @@ export function makeInputBoxInvalid(str){
     document.getElementById(str).style.display = "block";
 }
 
+
 //
 //changes visual of inputss (type="date")
 export function makeDateValid(e){
