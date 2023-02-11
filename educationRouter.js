@@ -15,28 +15,34 @@ const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", ()=>{
     if(eduIsValid()){
         makeDataReady();
-        console.log(data);
         sendPostRequest();
        // location.assign("final.html");
     }
 })
 
-let data;
+
+let readyData;
 
 function makeDataReady(){
-    data = {
-        name: localStorage.getItem("nameInput"),
-        surname: localStorage.getItem("lastNameInput"),
-        email: localStorage.getItem("emailInput"),
-        phone_number: localStorage.getItem("telInput"),
-        experiences: [],
-        educations: [],
-        image: "",
-        about_me: localStorage.getItem("aboutMeTextField")
+
+
+    readyData = {
+        "name": localStorage.getItem("nameInput"),
+        "surname": localStorage.getItem("lastNameInput"),
+        "email": localStorage.getItem("emailInput"),
+        "phone_number": modifyNumber(localStorage.getItem("telInput")),
+        "experiences": [],
+        "educations": [],
+        "image": "",
+        "about_me": localStorage.getItem("aboutMeTextField")
     }
-    addExperiences();
-    addEducations();
-    addImage();
+     addExperiences();
+     addEducations();
+     addImage();
+}
+
+function modifyNumber(num){
+    return num.replace(/\s+/g, '');
 }
 
 function addExperiences(){
@@ -49,7 +55,7 @@ function addExperiences(){
                 due_date: localStorage.getItem("endDateInput"+i),
                 description: localStorage.getItem("descriptionTextField"+i)
             }
-            data.experiences.push(expObj);
+            readyData.experiences.push(expObj);
         }
     }
 }
@@ -70,7 +76,7 @@ function addEducations(){
                 due_date: localStorage.getItem("endDateInputEdu"+i),
                 description: localStorage.getItem("descriptionTextFieldEducation"+i)
             }
-            data.educations.push(eduObj);
+            readyData.educations.push(eduObj);
         }
     }
 }
@@ -83,27 +89,42 @@ function isFullyFilledEdu(i){
 }
 
 function addImage(){
-    const file = new Blob([localStorage.getItem("image")], { type: 'image/jpeg' });
+    const base64Image = localStorage.getItem("image");
+    const binaryString = atob(base64Image.split(',')[1]);
+    const array = new Uint8Array(binaryString.length);
 
-    const fileReader = new FileReader();
-    fileReader.onload = function(e) {
-    const binaryString = e.target.result;
-        data.image = binaryString;
-    };
 
-    fileReader.readAsBinaryString(file);
+    for (let i = 0; i < binaryString.length; i++) {
+        array[i] = binaryString.charCodeAt(i);
+      }
+    
+      const blob = new Blob([array], { type: 'image/jpeg' });
+
+    readyData.image = blob;
 }
 
+const formData = new FormData();
 
-function sendPostRequest(){
-        fetch("http://resume.redberryinternship.ge/api/cvs", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
+async function sendPostRequest(){
+    for (let key in readyData) {
+        formData.append(key, readyData[key]);
+    }
+
+
+
+    
+    for (var pair of formData.entries()) {
+        console.log(pair[0]+ ', ' + pair[1]); 
+    }
+   
+
+    await axios.post('https://resume.redberryinternship.ge/api/cvs', formData, {
+               "Content-Type": "multipart/form-data"
+             }).then(res => {
+    console.log(res)
+    }).catch(error => {
+    console.error(error)
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
+      
 }
+

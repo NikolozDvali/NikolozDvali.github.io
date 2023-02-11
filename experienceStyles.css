@@ -553,7 +553,6 @@ body{
     font-size: 34px;
     line-height: 42px;
     color: #F93B1D;
-    letter-spacing: 1px;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -598,7 +597,6 @@ body{
     font-size: 18px;
     line-height: 22px;
     color: #F93B1D;
-    letter-spacing: 1px;
     margin-bottom: 0;
 }
 
@@ -637,7 +635,6 @@ body{
     font-size: 18px;
     line-height: 22px;
     color: #F93B1D;
-    letter-spacing: 1px;
     margin-bottom: 0;
     display: none;
 
@@ -724,7 +721,6 @@ body{
     font-size: 18px;
     line-height: 22px;
     color: #F93B1D;
-    letter-spacing: 1px;
 }
 
 #educationGrid{
