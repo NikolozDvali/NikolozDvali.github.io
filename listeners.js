@@ -362,6 +362,7 @@ function addLiveValidatorToEmailInPrivate(){
 
 //
 function addLiveValidatorToTelInPrivate(){
+    let lastInput ="";
     //checks telephone input;
     const telInput = document.getElementById("telInput");
     telInput.addEventListener("input", function(e){
@@ -370,6 +371,16 @@ function addLiveValidatorToTelInPrivate(){
         }else{
             makeInputBoxInvalid("telInput");
         }
+
+        if(telInput.value.length>lastInput.length){
+            if(telInput.value.length==4 || telInput.value.length==8 || telInput.value.length==11 || telInput.value.length==14){
+                telInput.value+=" ";
+            }
+        }
+
+
+        lastInput = telInput.value;
+        
     })
 }
 
