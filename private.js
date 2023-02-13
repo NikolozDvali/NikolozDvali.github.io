@@ -9,13 +9,13 @@ function openDialog() {
 //handles image upload, saves it to local storage;
 let input = document.getElementById("photoInput");
 input.addEventListener("change", function(e){
+    const file = e.target.files[0];
     const reader = new FileReader();
-    reader.onload = function (event) {
-        document.getElementById("profilePicture").src = event.target.result;
-        localStorage.setItem('image', event.target.result);
-        document.getElementById("photoInputSpan").style.display="block";
+    reader.onload = function () {
+      const dataUrl = reader.result;
+      localStorage.setItem("myFile", dataUrl);
     };
-    reader.readAsDataURL(input.files[0]);
+    reader.readAsDataURL(file);
 })
 
 

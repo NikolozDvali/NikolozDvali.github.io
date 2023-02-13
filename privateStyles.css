@@ -408,6 +408,7 @@ body{
     color: #F93B1D;
     margin-bottom: 0;
     margin-top: 0;
+    word-break: break-all;
 }
 
 #emailDiv{
